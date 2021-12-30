@@ -47,17 +47,8 @@ async def startprivate(client, message):
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
     joinButton = InlineKeyboardMarkup(
         [
-            [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/MTSLUpdates"),
-                InlineKeyboardButton(
-                    "SUPPORT GROUP", url="https://t.me/Filmmirrorchat"
-                ),
-            ]
         ]
     )
-    welcomed = f"😊😊Hey <b>{message.from_user.first_name}</b>\nThis Is the database Of MTSL BOT ᴾᵒʷᵉʳᵉᵈ ᵇʸ ᴷᴿᴰᴸ🇱🇰.\n\n 🎚 Use This One to Search results- @MTSLRobot"
-    await message.reply_text(welcomed, reply_markup=joinButton)
-    raise StopPropagation
 
 
 @Bot.on_message(filters.command("settings"))
